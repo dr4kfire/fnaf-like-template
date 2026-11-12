@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://dsdkjq2djqkd2"]
+
+[ext_resource type="Script" uid="uid://c5icfpold1qw1" path="res://objects/camera_view.gd" id="1_5jvr2"]
+[ext_resource type="Texture2D" uid="uid://fgrda7soeh13" path="res://assets/default/office/cam-view/cam-1a/all.png" id="1_bev5p"]
+[ext_resource type="Shader" uid="uid://4vtv0lifm0sp" path="res://objects/panorama.gdshader" id="2_5jvr2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_etck3"]
+shader = ExtResource("2_5jvr2")
+shader_parameter/zoom = 75
+shader_parameter/smoothed = true
+shader_parameter/vertical = false
+shader_parameter/noWrap = true
+
+[sub_resource type="Animation" id="Animation_etck3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cam_view:offset_transform_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5jvr2"]
+resource_name = "pan_animation"
+length = 10.0
+loop_mode = 2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cam_view:offset_transform_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 4.5, 5.5, 9.5, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(160, 0), Vector2(160, 0), Vector2(0, 0), Vector2(0, 0), Vector2(-160, 0), Vector2(-160, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_etck3"]
+_data = {
+&"RESET": SubResource("Animation_etck3"),
+&"pan_animation": SubResource("Animation_5jvr2")
+}
+
+[node name="CameraView" type="Control" unique_id=405970867]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5jvr2")
+
+[node name="cam_view" type="TextureRect" parent="." unique_id=712070667]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -360.0
+offset_right = 800.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+texture = ExtResource("1_bev5p")
+
+[node name="panorama_lens" type="ColorRect" parent="." unique_id=1546188930]
+material = SubResource("ShaderMaterial_etck3")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="FrameTime" type="Timer" parent="." unique_id=1775155479]
+one_shot = true
+
+[node name="PanningAnimation" type="AnimationPlayer" parent="." unique_id=402812229]
+libraries/ = SubResource("AnimationLibrary_etck3")
+autoplay = &"pan_animation"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=125330492]
+
+[connection signal="timeout" from="FrameTime" to="." method="_on_frame_time_timeout"]

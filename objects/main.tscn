@@ -579,6 +579,7 @@ offset_bottom = -117.0
 flat = true
 
 [node name="panorama_lens" type="ColorRect" parent="." unique_id=527571971]
+visible = false
 material = SubResource("ShaderMaterial_pjegu")
 layout_mode = 1
 anchors_preset = 15
@@ -608,6 +609,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="CameraFlip" type="AnimatedSprite2D" parent="UI" unique_id=1941682492]
+visible = false
 sprite_frames = SubResource("SpriteFrames_valpn")
 animation = &"camera_flip"
 autoplay = "default"
@@ -616,7 +618,6 @@ frame_progress = 1.0
 centered = false
 
 [node name="Cams" type="Control" parent="UI" unique_id=785301055]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
