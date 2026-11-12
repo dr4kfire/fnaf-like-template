@@ -1,6 +1,7 @@
 extends Control
 
 @export var scroll_curve : Curve
+@export var states: Array[CamStateResource]
 
 
 func _process(delta: float) -> void:
@@ -12,6 +13,8 @@ func _process(delta: float) -> void:
 
 #region PRIVATE
 # -- PRIVATE -------------------------------------------------------------------
+var _night: int = 1
+var _hour: int = 12
 var _in_cams: bool = false:
 	set(value):
 		_in_cams = value
@@ -23,6 +26,7 @@ var _in_cams: bool = false:
 @onready var _turn_anchor: Control = $TurnAnchor
 @onready var _block_panel: Panel = $BLOCK_PANEL
 @onready var _cams_view: Control = $UI/Cams
+@onready var _camera_view: CamDisplay = $UI/Cams/SubViewportContainer/SubViewport/CameraView
 
 @onready var _door_left: AnimatedSprite2D = $TurnAnchor/DoorLeft
 @onready var _door_right: AnimatedSprite2D = $TurnAnchor/DoorRight
@@ -85,6 +89,7 @@ func _on_boop_button_pressed() -> void:
 	_boop_sound.play()
 
 func _on_camera_trigger_mouse_entered() -> void:
+	if not _camera_trigger.visible: return
 	_in_cams = !_in_cams
 	_cam_flip_timer.start()
 	_camera_trigger.visible = false
@@ -100,12 +105,19 @@ func _on_camera_trigger_mouse_entered() -> void:
 
 func _on_cam_trigger_cooldown_timer_timeout() -> void:
 	_camera_trigger.visible = true
+	_camera_view.play_switch_effect()
 	_cams_view.visible = _in_cams
 
 func _on_cam_change_pressed() -> void:
 	_cam_change_sound.play()
 	var cam_name: String = _first_cam_button.button_group.get_pressed_button().name
 	match cam_name:
+		"cam1a":
+			var CAM_1A_ALL := load("uid://c8qihgihwwqee")
+			_camera_view.change_state(CAM_1A_ALL)
+		"cam1b":
+			var CAM_1B_NONE := load("uid://cxfk5hw6daojq")
+			_camera_view.change_state(CAM_1B_NONE)
 		_:
 			return
 #endregion

@@ -1,26 +1,29 @@
 [gd_scene format=3 uid="uid://dkna0gvvl2ohy"]
 
-[ext_resource type="Shader" uid="uid://4vtv0lifm0sp" path="res://objects/panorama.gdshader" id="1_2qr2m"]
+[ext_resource type="Shader" uid="uid://4vtv0lifm0sp" path="res://shaders/panorama.gdshader" id="1_2qr2m"]
 [ext_resource type="Script" uid="uid://oowip54e3kea" path="res://objects/game.gd" id="1_f1df6"]
+[ext_resource type="Script" uid="uid://gr6ckvr6ohxi" path="res://objects/resource/cam_state.gd" id="2_o3dn3"]
 [ext_resource type="Texture2D" uid="uid://bq0pmb3kb6til" path="res://assets/default/office/Office1.png" id="2_yd0qk"]
 [ext_resource type="Texture2D" uid="uid://bkybf8q2oa84v" path="res://assets/default/office/OfficeLightRNon.png" id="3_lraq1"]
-[ext_resource type="Texture2D" uid="uid://ct73gx4rtl6to" path="res://assets/default/office/ButtonsLeft.png" id="4_5wnch"]
-[ext_resource type="Texture2D" uid="uid://cp5k6ex6v1se0" path="res://assets/default/office/ButtonsRight.png" id="4_n3uw7"]
-[ext_resource type="Texture2D" uid="uid://26itkumahabh" path="res://assets/default/office/ButtonsLeftDoor.png" id="4_nimvt"]
+[ext_resource type="Resource" uid="uid://c8qihgihwwqee" path="res://resources/cam1a-all.tres" id="3_xuigc"]
+[ext_resource type="Resource" uid="uid://cxfk5hw6daojq" path="res://resources/cam1b-none.tres" id="4_2k6mn"]
+[ext_resource type="Texture2D" uid="uid://ct73gx4rtl6to" path="res://assets/default/office/door_buttons/ButtonsLeft.png" id="4_5wnch"]
+[ext_resource type="Texture2D" uid="uid://cp5k6ex6v1se0" path="res://assets/default/office/door_buttons/ButtonsRight.png" id="4_n3uw7"]
+[ext_resource type="Texture2D" uid="uid://26itkumahabh" path="res://assets/default/office/door_buttons/ButtonsLeftDoor.png" id="4_nimvt"]
 [ext_resource type="Texture2D" uid="uid://bjadbo8xj5feb" path="res://assets/default/office/OfficeLightLNon.png" id="4_uoa7s"]
-[ext_resource type="Texture2D" uid="uid://ba8eqvdiyj4v3" path="res://assets/default/office/ButtonsLeftLight.png" id="5_nydcl"]
+[ext_resource type="Texture2D" uid="uid://ba8eqvdiyj4v3" path="res://assets/default/office/door_buttons/ButtonsLeftLight.png" id="5_nydcl"]
 [ext_resource type="Texture2D" uid="uid://cqquqo07yqrmj" path="res://assets/default/office/57 (Edited).png" id="5_rta3i"]
-[ext_resource type="Texture2D" uid="uid://b8y4vbcufdeka" path="res://assets/default/office/ButtonsLeftLightsDoor.png" id="6_dah16"]
+[ext_resource type="Texture2D" uid="uid://b8y4vbcufdeka" path="res://assets/default/office/door_buttons/ButtonsLeftLightsDoor.png" id="6_dah16"]
 [ext_resource type="Texture2D" uid="uid://bit2xsjg4bjgy" path="res://assets/default/office/59.png" id="6_nimvt"]
 [ext_resource type="Texture2D" uid="uid://beg81hj1lve5n" path="res://assets/default/ui/camthing.png" id="6_t1t6x"]
 [ext_resource type="Texture2D" uid="uid://deag7nsm5cm3c" path="res://assets/default/office/60.png" id="7_nydcl"]
 [ext_resource type="FontFile" uid="uid://bvn5kmm83ccmd" path="res://assets/default/ui/five-nights-at-freddys-1-and-2.otf" id="7_xpy5u"]
 [ext_resource type="Texture2D" uid="uid://butccpojsxe16" path="res://assets/default/ui/456.png" id="8_bng5c"]
-[ext_resource type="Texture2D" uid="uid://dbxfn2a070wsu" path="res://assets/default/office/ButtonsRightDoor.png" id="8_y3fux"]
-[ext_resource type="Texture2D" uid="uid://dia5baf2ejjf5" path="res://assets/default/office/ButtonsRightLights.png" id="9_316wc"]
+[ext_resource type="Texture2D" uid="uid://dbxfn2a070wsu" path="res://assets/default/office/door_buttons/ButtonsRightDoor.png" id="8_y3fux"]
+[ext_resource type="Texture2D" uid="uid://dia5baf2ejjf5" path="res://assets/default/office/door_buttons/ButtonsRightLights.png" id="9_316wc"]
 [ext_resource type="Texture2D" uid="uid://s1ocwxxlmopd" path="res://assets/default/office/doors/right/104.png" id="9_f7qox"]
 [ext_resource type="Texture2D" uid="uid://bwjs5gjburvx2" path="res://assets/default/office/doors/left/88.png" id="9_sm688"]
-[ext_resource type="Texture2D" uid="uid://coofa84wr83ed" path="res://assets/default/office/ButtonsRightLightsDoor.png" id="10_5h1mt"]
+[ext_resource type="Texture2D" uid="uid://coofa84wr83ed" path="res://assets/default/office/door_buttons/ButtonsRightLightsDoor.png" id="10_5h1mt"]
 [ext_resource type="Texture2D" uid="uid://bjma38x5cs182" path="res://assets/default/office/doors/left/89.png" id="10_d887b"]
 [ext_resource type="Texture2D" uid="uid://cnobpggwywf1f" path="res://assets/default/office/doors/right/106.png" id="10_oj44q"]
 [ext_resource type="Texture2D" uid="uid://dda3w4l1rs5dn" path="res://assets/default/office/doors/left/91.png" id="11_3qdx6"]
@@ -68,6 +71,7 @@
 [ext_resource type="Texture2D" uid="uid://bcgeexxh2h1bb" path="res://assets/default/cams/166.png" id="61_eu12e"]
 [ext_resource type="Texture2D" uid="uid://br7tdfio3vvr0" path="res://assets/default/cams/7.png" id="61_ew1j2"]
 [ext_resource type="Texture2D" uid="uid://fph3m5ms12qc" path="res://assets/default/cams/164.png" id="62_67rs5"]
+[ext_resource type="Shader" uid="uid://bqqy3huyyeq4e" path="res://shaders/replace_color_as_alpha.gdshader" id="62_0382w"]
 [ext_resource type="Texture2D" uid="uid://bqlodfvv26fg4" path="res://assets/default/cams/171.png" id="62_w3pmo"]
 [ext_resource type="Texture2D" uid="uid://cywq1vdjxc6xb" path="res://assets/default/cams/170.png" id="63_5wv8g"]
 [ext_resource type="AudioStream" uid="uid://b4kgikuh8ibrq" path="res://assets/default/sounds/cam_close.mp3" id="63_56ik8"]
@@ -82,7 +86,13 @@
 [ext_resource type="Texture2D" uid="uid://cxyhjqbe84k5v" path="res://assets/default/cams/165.png" id="70_8atkv"]
 [ext_resource type="Texture2D" uid="uid://c8mn488dpgjw7" path="res://assets/default/cams/175.png" id="71_0inh0"]
 [ext_resource type="Texture2D" uid="uid://dpd7fh45744ts" path="res://assets/default/cams/176.png" id="72_5bxbu"]
+[ext_resource type="PackedScene" uid="uid://dsdkjq2djqkd2" path="res://objects/camera_view.tscn" id="74_4mhpn"]
 [ext_resource type="AudioStream" uid="uid://b8icahg01nlek" path="res://assets/default/sounds/blip3.mp3" id="81_ln3l6"]
+[ext_resource type="AudioStream" uid="uid://bbddxgqnu1evv" path="res://assets/default/sounds/voiceovers/voiceover1.mp3" id="89_m1a8l"]
+[ext_resource type="AudioStream" uid="uid://bemrtjfk7ofo3" path="res://assets/default/sounds/voiceovers/voiceover2.mp3" id="90_i0o2x"]
+[ext_resource type="AudioStream" uid="uid://dogi735mctcvl" path="res://assets/default/sounds/voiceovers/voiceover3.mp3" id="91_85e72"]
+[ext_resource type="AudioStream" uid="uid://bt2snj0bmigwp" path="res://assets/default/sounds/voiceovers/voiceover4.mp3" id="92_ysmyo"]
+[ext_resource type="AudioStream" uid="uid://kma1use1hn4l" path="res://assets/default/sounds/voiceovers/voiceover5.mp3" id="93_pwi14"]
 
 [sub_resource type="Curve" id="Curve_5wnch"]
 _limits = [510.0, 800.0, 0.0, 1.0]
@@ -307,39 +317,24 @@ _data = {
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_w3pmo"]
 
-[sub_resource type="Shader" id="Shader_tmkbw"]
-code = "shader_type canvas_item;
-
-uniform vec3 color : source_color;
-
-void vertex() {
-	// Called for every vertex the material is visible on.
-}
-
-void fragment() {
-	if (COLOR.xyz == color) {
-		COLOR = vec4(0,0,0,0);
-	}
-}
-
-//void light() {
-//	// Called for every pixel for every light affecting the CanvasItem.
-//	// Uncomment to replace the default light processing function with this one.
-//}
-"
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w3pmo"]
-shader = SubResource("Shader_tmkbw")
+shader = ExtResource("62_0382w")
 shader_parameter/color = Color(0.3529412, 0.3529412, 0.3529412, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cb6sl"]
-shader = SubResource("Shader_tmkbw")
+shader = ExtResource("62_0382w")
 shader_parameter/color = Color(0.7058824, 0.7058824, 0.7058824, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m1a8l"]
 
 [sub_resource type="FontVariation" id="FontVariation_xpy5u"]
 base_font = ExtResource("7_xpy5u")
 variation_embolden = 0.8
 variation_transform = Transform2D(0.88, 0, 0, 0.885, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o3dn3"]
+shader = ExtResource("62_0382w")
+shader_parameter/color = Color(0, 0, 0, 1)
 
 [sub_resource type="FontVariation" id="FontVariation_56ik8"]
 base_font = SubResource("FontVariation_xpy5u")
@@ -361,6 +356,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f1df6")
 scroll_curve = SubResource("Curve_5wnch")
+states = Array[ExtResource("2_o3dn3")]([ExtResource("3_xuigc"), ExtResource("4_2k6mn")])
 
 [node name="TurnAnchor" type="Control" parent="." unique_id=2139796690]
 layout_mode = 1
@@ -579,7 +575,6 @@ offset_bottom = -117.0
 flat = true
 
 [node name="panorama_lens" type="ColorRect" parent="." unique_id=527571971]
-visible = false
 material = SubResource("ShaderMaterial_pjegu")
 layout_mode = 1
 anchors_preset = 15
@@ -609,15 +604,13 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="CameraFlip" type="AnimatedSprite2D" parent="UI" unique_id=1941682492]
-visible = false
 sprite_frames = SubResource("SpriteFrames_valpn")
 animation = &"camera_flip"
 autoplay = "default"
-frame = 11
-frame_progress = 1.0
 centered = false
 
 [node name="Cams" type="Control" parent="UI" unique_id=785301055]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -625,6 +618,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="UI/Cams" unique_id=1277282904]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="UI/Cams/SubViewportContainer" unique_id=1982578024]
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 0
+
+[node name="CameraView" parent="UI/Cams/SubViewportContainer/SubViewport" unique_id=405970867 instance=ExtResource("74_4mhpn")]
 
 [node name="Overlay" type="TextureRect" parent="UI/Cams" unique_id=1886989663]
 layout_mode = 1
@@ -637,11 +646,10 @@ texture = ExtResource("60_ghnx1")
 
 [node name="TextureRect2" type="TextureRect" parent="UI/Cams/Overlay" unique_id=2037736938]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 29.0
-offset_right = 81.0
-offset_bottom = 79.0
-scale = Vector2(0.725, 0.725)
+offset_left = 57.0
+offset_top = 50.0
+offset_right = 107.0
+offset_bottom = 100.0
 texture = ExtResource("61_ew1j2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Cams/Overlay/TextureRect2" unique_id=1708177266]
@@ -655,10 +663,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -355.0
-offset_top = -363.0
-offset_right = -17.0
-offset_bottom = -16.0
+offset_left = -374.0
+offset_top = -372.0
+offset_right = -11.0
+offset_bottom = -6.0
 grow_horizontal = 0
 grow_vertical = 0
 texture = ExtResource("62_67rs5")
@@ -671,7 +679,6 @@ offset_left = 64.0
 offset_top = 71.0
 offset_right = 120.0
 offset_bottom = 108.0
-scale = Vector2(0.825, 0.825)
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_w3pmo")
@@ -696,7 +703,6 @@ grow_vertical = 2
 texture = ExtResource("62_w3pmo")
 expand_mode = 1
 stretch_mode = 5
-metadata/_edit_lock_ = true
 
 [node name="cam1a" type="TextureButton" parent="UI/Cams/Overlay/Map" unique_id=893570785]
 layout_mode = 0
@@ -704,7 +710,6 @@ offset_left = 84.0
 offset_top = 22.0
 offset_right = 140.0
 offset_bottom = 59.0
-scale = Vector2(0.825, 0.825)
 toggle_mode = true
 button_pressed = true
 action_mode = 0
@@ -737,7 +742,6 @@ offset_left = 43.0
 offset_top = 133.0
 offset_right = 99.0
 offset_bottom = 170.0
-scale = Vector2(0.825, 0.825)
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_w3pmo")
@@ -769,7 +773,6 @@ offset_left = -23.0
 offset_top = 88.0
 offset_right = 33.0
 offset_bottom = 125.0
-scale = Vector2(0.825, 0.825)
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_w3pmo")
@@ -801,7 +804,6 @@ offset_left = 13.0
 offset_top = 220.0
 offset_right = 69.0
 offset_bottom = 257.0
-scale = Vector2(0.825, 0.825)
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_w3pmo")
@@ -833,7 +835,6 @@ offset_left = 180.0
 offset_top = 231.0
 offset_right = 236.0
 offset_bottom = 268.0
-scale = Vector2(0.825, 0.825)
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_w3pmo")
@@ -865,7 +866,6 @@ offset_left = 180.0
 offset_top = 269.0
 offset_right = 236.0
 offset_bottom = 306.0
-scale = Vector2(0.825, 0.825)
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_w3pmo")
@@ -897,7 +897,6 @@ offset_left = 92.0
 offset_top = 231.0
 offset_right = 148.0
 offset_bottom = 268.0
-scale = Vector2(0.825, 0.825)
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_w3pmo")
@@ -929,7 +928,6 @@ offset_left = 92.0
 offset_top = 269.0
 offset_right = 148.0
 offset_bottom = 306.0
-scale = Vector2(0.825, 0.825)
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_w3pmo")
@@ -961,7 +959,6 @@ offset_left = 271.0
 offset_top = 205.0
 offset_right = 327.0
 offset_bottom = 242.0
-scale = Vector2(0.825, 0.825)
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_w3pmo")
@@ -993,7 +990,6 @@ offset_left = 271.0
 offset_top = 93.0
 offset_right = 327.0
 offset_bottom = 130.0
-scale = Vector2(0.825, 0.825)
 toggle_mode = true
 action_mode = 0
 button_group = SubResource("ButtonGroup_w3pmo")
@@ -1029,15 +1025,28 @@ anchor_bottom = 1.0
 offset_left = -300.0
 offset_top = -79.0
 offset_right = 300.0
-offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("6_t1t6x")
-stretch_mode = 5
+stretch_mode = 2
 
 [node name="CooldownTimer" type="Timer" parent="UI/CameraTrigger" unique_id=1221190657]
 wait_time = 0.3
 one_shot = true
+
+[node name="CameraTriggerBox" type="Panel" parent="UI" unique_id=432210034]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -298.0
+offset_top = -75.0
+offset_right = 298.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_m1a8l")
 
 [node name="Battery" type="Control" parent="UI" unique_id=1406068160]
 layout_mode = 1
@@ -1081,6 +1090,7 @@ scroll_active = false
 vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="UI/Battery" unique_id=635310191]
+material = SubResource("ShaderMaterial_o3dn3")
 layout_mode = 0
 offset_left = 123.0
 offset_top = -6.0
@@ -1163,6 +1173,24 @@ autoplay = true
 [node name="CamLoop" type="AudioStreamPlayer" parent="Sounds/Ambients" unique_id=853711968]
 stream = ExtResource("64_ivmu4")
 
+[node name="VoiceOver" type="Node" parent="Sounds" unique_id=961229516]
+
+[node name="Voiceover1" type="AudioStreamPlayer" parent="Sounds/VoiceOver" unique_id=106149397]
+stream = ExtResource("89_m1a8l")
+autoplay = true
+
+[node name="Voiceover2" type="AudioStreamPlayer" parent="Sounds/VoiceOver" unique_id=1940131224]
+stream = ExtResource("90_i0o2x")
+
+[node name="Voiceover3" type="AudioStreamPlayer" parent="Sounds/VoiceOver" unique_id=1613119589]
+stream = ExtResource("91_85e72")
+
+[node name="Voiceover4" type="AudioStreamPlayer" parent="Sounds/VoiceOver" unique_id=1646285303]
+stream = ExtResource("92_ysmyo")
+
+[node name="Voiceover5" type="AudioStreamPlayer" parent="Sounds/VoiceOver" unique_id=338049632]
+stream = ExtResource("93_pwi14")
+
 [connection signal="toggled" from="TurnAnchor/ButtonLeft/DoorButtonLeft" to="." method="_on_door_button_left_toggled"]
 [connection signal="toggled" from="TurnAnchor/ButtonLeft/LightButtonLeft" to="." method="_on_light_button_left_toggled"]
 [connection signal="toggled" from="TurnAnchor/ButtonRight/DoorButtonRight" to="." method="_on_door_button_right_toggled"]
@@ -1179,5 +1207,5 @@ stream = ExtResource("64_ivmu4")
 [connection signal="pressed" from="UI/Cams/Overlay/Map/cam2b" to="." method="_on_cam_change_pressed"]
 [connection signal="pressed" from="UI/Cams/Overlay/Map/cam6" to="." method="_on_cam_change_pressed"]
 [connection signal="pressed" from="UI/Cams/Overlay/Map/cam7" to="." method="_on_cam_change_pressed"]
-[connection signal="mouse_entered" from="UI/CameraTrigger" to="." method="_on_camera_trigger_mouse_entered"]
 [connection signal="timeout" from="UI/CameraTrigger/CooldownTimer" to="." method="_on_cam_trigger_cooldown_timer_timeout"]
+[connection signal="mouse_entered" from="UI/CameraTriggerBox" to="." method="_on_camera_trigger_mouse_entered"]

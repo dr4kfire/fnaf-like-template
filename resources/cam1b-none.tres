@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CamStateResource" format=3 uid="uid://cxfk5hw6daojq"]
+
+[ext_resource type="Texture2D" uid="uid://blg7wcsm4o2ql" path="res://assets/default/cams/cam-view/cam-1b/none.png" id="1_x6hs6"]
+[ext_resource type="Script" uid="uid://gr6ckvr6ohxi" path="res://objects/resource/cam_state.gd" id="2_8g4mo"]
+
+[resource]
+script = ExtResource("2_8g4mo")
+cam_name = &"cam1b"
+images = Array[Texture2D]([ExtResource("1_x6hs6")])
+metadata/_custom_type_script = "uid://gr6ckvr6ohxi"
