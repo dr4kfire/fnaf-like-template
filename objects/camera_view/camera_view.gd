@@ -2,6 +2,9 @@ class_name CamDisplay
 extends Control
 
 
+@export var camera_buttons_group: ButtonGroup
+
+
 func change_state(new_state: CamStateResource) -> void:
 	if new_state == _cam_state:
 		return
@@ -36,3 +39,7 @@ func _on_frame_time_timeout() -> void:
 		return
 	_cam_view.texture = _cam_state.images[_current_index]
 	_frame_time.start()
+
+func _on_camera_button_toggled(toggled_on: bool) -> void:
+	var cam_name: StringName = camera_buttons_group.get_pressed_button().name
+	
